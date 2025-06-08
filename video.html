@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video | Aiden Lundien</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AIDEN LUNDIEN</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="animation.html">Animation</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="photo.html">Photo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="video-section">
+    <div class="video-entry fade-in-on-load">
+      <div class="video-box">
+        <video poster="images/For Friends and Family Only Thumbnail.png" controls loop>
+          <source src="videos/For Friends and Family Only (1).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-title">“For Friends and Family Only” (December 1st, 2024), Live-Action Short Film<br>2 min 45s</p>
+      </div>
+      <div class="video-description">
+        <p>“For Friends and Family Only” is an exercise in reflection on what I truly love the most; nature, my friends, and my family. 
+          It acts as an extension on who I am as a person, and where my heart truly lies.</p>
+        <p>This film is meant to capture a sense of warmth, and make you feel safe and like you can be totally vulnerable. 
+          After meeting these wonderful people and connecting with myself, I've been on a journey of self-discovery and healing.</p>
+        <p>The film was shot entirely with a Sony camcorder I rented on campus. 
+          I composited everything in After Effects and edited it all in Premiere Pro. 
+          Every shot composited to look like Super 8 film captures a moment in time through my eyes, 
+          whilst the shots directly from the camera are meant to feel "larger than life."</p>
+        <p>All of the sounds were recorded by me, and the music is a combination of an orignal composition by my brother, 
+          and a song called "Isn't That Enough" by Shawn Mendes. I made it sound distorted whenever it was playing over "Super 8" footage.</p>
+      </div>
+    </div>
+
+    <div class="video-entry fade-in-on-load">
+        <div class="video-box">
+          <video poster="images/Chasing a Feeling Thumbnail.png" controls loop>
+            <source src="videos/AA004201_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="video-title">“Chasing a Feeling” (September 29th, 2024), Live-Action Short Film<br>1 min 42s</p>
+        </div>
+        <div class="video-description">
+          <p>“Chasing a Feeling” is a short film about appreciating the little things in life, no matter how many people try to dictate how we should be living.</p>
+          <p>I am of the belief that art, music, the beauty of the world around us, and the love we share for our friends and family are the things we stay alive for. These are all things filled with passion, and as humans we're incredibly passionate creatures. So, chase that feeling in your heart with no regrets.</p>
+          <p>The film was shot entirely with a Sony camcorder I rented on campus. I composited everything in After Effects and edited it all in Premiere Pro. Every shot composited is supposed to look like it was shot on film, giving a sense of sentimental value and resembling a moment captured that feels like a memory.</p>
+          <p>The sound effects were taken from sounds I recorded whilst in Steamboat Springs, and the music is a mixture of my brother's guitar playing, and "So Long For Now" from Slipstream Archive.</p>
+        </div>
+      </div>
+
+      <div class="video-entry fade-in-on-scroll-animation">
+        <div class="video-box">
+          <video poster="images/Wander Thumbnail.png" controls loop>
+            <source src="videos/WANDER.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="video-title">“Wander” (September 2nd, 2024), Live-Action Short Film<br>44 seconds</p>
+        </div>
+        <div class="video-description">
+          <p>“Wander” is a short film capturing the melancholic feeling about feeling lost in your 20s. It's simultaneously calming, lonely, and bittersweet.</p>
+          <p>This was my first live-action short film. I've never been comfortable in front of a camera, so this was huge leap forward in getting out of my comfort zone. Coupled with that feeling of being lost, I believe I was able to give a believable exploration on "wandering around."</p>
+          <p>Similarly to my other live-action shorts, this was shot entirely with a Sony camcorder I rented on campus. I composited everything in After Effects and edited it all in Premiere Pro. Every shot composited is supposed to look like it was shot on film, giving a sense of sentimental value and resembling a moment captured that feels like a memory. </p>
+          <p>The sound effects were recorded by me all around Fort Collins, and the music is a piece from SlipStream Archive.</p>
+        </div>
+      </div>
+
+
+</body>
+</html>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    document.querySelectorAll('.fade-in-on-scroll-animation').forEach(section => {
+      observer.observe(section);
+    });
+  </script>

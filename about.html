@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Aiden Lundien</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">AIDEN LUNDIEN</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="animation.html">Animation</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="photo.html">Photo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-section">
+    <div class="about-container">
+      <div class="about-image fade-in-on-load">
+        <img src="images/Film 1.png" alt="Aiden Lundien" />
+      </div>
+      <div class="about-text">
+        <h1>ABOUT ME</h1>
+        <p>My name is Aiden Lundien, and I’m an aspiring filmmaker based in Steamboat Springs, Colorado.</p>
+        <p>Ever since I was a child, I was enamored by the art of filmmaking, 
+          and it was instrumental to my development as a person. Everybody is born under different circumstances. 
+          Our upbringing is unique, where we were born is unique, and who we have grown to be is unique. 
+          The goal of civilization and progress is to reach out and empathize with other people and discover what makes them tick, and what they care about. 
+          Movies have helped me connect with others, and taught me how to understand how another person is feeling.</p>
+        <p>Exploring these universal connections and emotions is my primary goal as an artist. 
+          I want to tell stories that are raw and bring people together to feel something. 
+          I don’t strive to create because it’s cute. I strive to create because I’m a member of the human race. 
+          Art, beauty, romance, love; these are the things we stay alive for.</p>
+      </div>
+    </div>
+    <section id="education" class="reveal-section">
+      <h2>Education</h2>
+      <p>BFA in Electronic Art — Colorado State University, 2025</p>
+    </section>
+    
+    <section id="skills" class="reveal-section">
+      <h2>Skills</h2>
+      <ul>
+        <li>2D/3D Animation (Blender, After Effects)</li>
+        <li>Video Editing (Premiere Pro)</li>
+        <li>Storyboarding (Photoshop)</li>
+        <li>Photography & Lighting</li>
+        <li>Basic Web Design (HTML, CSS and Javascript)</li>
+      </ul>
+    </section>
+    
+    <section id="mediums" class="reveal-section">
+      <h2>Preferred Mediums</h2>
+      <p>3D animation, narrative video, documentary, digital photography, and analog film.</p>
+    </section>
+    
+    <section id="contact" class="reveal-section contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:yourname@example.com">aidenlundien@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/aiden_lundien03" target="_blank">@aiden_lundien03</a></p>
+    </section>
+
+  </main>
+</body>
+</html>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.reveal-section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
